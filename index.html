@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Video test</title>
+<style>body{font-family:sans-serif;margin:16px;background:#111;color:#eee}video{width:100%;max-width:960px;border-radius:12px;background:#000}</style>
+</head><body>
+<h2>Choke manifold video test</h2>
+<p>Press play, then drag the bar to skip ahead.</p>
+<video controls preload="metadata" playsinline src="https://github.com/mohamed-mansour106/course-videos-test/releases/download/v1/1-choke_whiteboard.mp4"></video>
+<p id="s">Waiting...</p>
+<script>
+var v=document.querySelector("video"),s=document.getElementById("s");
+v.addEventListener("loadedmetadata",function(){s.textContent="Loaded: "+Math.round(v.duration)+" s"});
+v.addEventListener("error",function(){s.textContent="Video error code "+(v.error&&v.error.code)});
+v.addEventListener("playing",function(){s.textContent="Playing OK at "+Math.round(v.currentTime)+" s"});
+</script>
+</body></html>
